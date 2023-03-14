@@ -1,16 +1,8 @@
 terraform {
-  cloud {
-    organization = "hashicorp-learn-phase-1"
-
-    workspaces {
-      name = "NewNullResource"
-    }
-  }
-required_providers {
-    null = {
-      source = "hashicorp/null"
-      version = "3.2.1"
+  required_providers {
+    myprovider = {
+      source = "app.terraform.io/hashicorp-learn-phase-1/myprovider"
+      version = "0.1.0"
     }
   }
 }
-resource "null_resource" "cluster01"{}
