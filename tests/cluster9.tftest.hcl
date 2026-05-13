@@ -6,7 +6,7 @@ run "basic_test" {
   }
 
   assert {
-    condition     = length(module.cluster9_id) > 0
+    condition     = module.outputs.cluster9_id != ""
     error_message = "cluster9_id should not be empty"
   }
 }
